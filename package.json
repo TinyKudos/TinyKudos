@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "description": "Salesforce App",
   "scripts": {
-    "scratch": "sf org create scratch -f config/project-scratch-def.json -d -y 30",
+    "scratch": "sf org create scratch -f config/project-scratch-def.json -d -y 30 -a TinyKudos",
     "push": "sf project deploy start",
     "dev": "npm run scratch && npm run push",
     "lint": "eslint **/{aura,lwc}/**/*.js",
@@ -16,7 +16,8 @@
     "prettier": "prettier --write \"**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}\"",
     "prettier:verify": "prettier --check \"**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}\"",
     "postinstall": "husky install",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "css:watch": "npx tailwindcss -i ./unpackaged/input.css -o ./unpackaged/output.css --watch"
   },
   "devDependencies": {
     "@lwc/eslint-plugin-lwc": "^1.1.2",
