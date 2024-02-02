@@ -28,3 +28,12 @@ jobs:
 
       - name: Authenticate to Dev Hub
         run: echo ${{ secrets.DEV_HUB_AUTH_URL}} > ./SFDX_URL_STORE.txt && sf org login sfdx-url --sfdxurlfile=./SFDX_URL_STORE.txt --alias=devhub --set-default-dev-hub
+
+      - name: Create Scratch Org
+        run: sf org create scratch -f config/project-scratch-def.json -d -y 1
+
+      - name: Push Source to Scratch Org
+        run: npm run push
+
+      - name: Delete Scratch Org
+        run: sf org delete --no-prompt
