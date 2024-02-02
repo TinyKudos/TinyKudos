@@ -2,7 +2,7 @@ name: Run Jest Tests
 
 on:
   pull_request:
-    branches: [main, develop ]
+    branches: [ main, develop ]
     types: [ opened, reopened, synchronize, closed, labeled ]
 
 jobs:
@@ -22,3 +22,9 @@ jobs:
 
     - name: Run Jest Tests
       run: npm test
+
+    - name: Install Salesforce CLI
+      run: npm install -g @salesforce/cli
+
+    - name: Authenticate to Dev Hub
+      run: echo ${{ secrets.DEV_HUB_AUTH_URL}} > ./SFDX_URL_STORE.txt && sf org login sfdx-url --sfdxurlfile=./SFDX_URL_STORE.txt --alias=devhub --set-default-dev-hub
