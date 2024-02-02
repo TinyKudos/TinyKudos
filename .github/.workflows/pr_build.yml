@@ -4,6 +4,7 @@ on:
   pull_request:
     branches:
       - develop
+    types: [ opened, reopened, synchronize, closed, labeled ]
 
 jobs:
   build:
