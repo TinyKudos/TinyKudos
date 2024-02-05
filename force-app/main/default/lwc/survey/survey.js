@@ -6,4 +6,8 @@ export default class Survey extends LightningElement {
     async connectedCallback() {
         await loadStyle(this, tailwind);
     }
+
+    get numbers() {
+        return [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    }
 }

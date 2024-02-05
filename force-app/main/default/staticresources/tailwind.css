@@ -751,10 +751,6 @@ select {
   margin-top: 0.25rem;
 }
 
-.-ml-px {
-  margin-left: -1px;
-}
-
 .inline-flex {
   display: inline-flex;
 }
@@ -770,11 +766,6 @@ select {
 .rounded-l-md {
   border-top-left-radius: 0.375rem;
   border-bottom-left-radius: 0.375rem;
-}
-
-.rounded-r-md {
-  border-top-right-radius: 0.375rem;
-  border-bottom-right-radius: 0.375rem;
 }
 
 .bg-white {
@@ -808,11 +799,6 @@ select {
 
 .leading-6 {
   line-height: 1.5rem;
-}
-
-.text-gray-600 {
-  --tw-text-opacity: 1;
-  color: rgb(75 85 99 / var(--tw-text-opacity));
 }
 
 .text-gray-900 {
