@@ -17,7 +17,7 @@
     "prettier:verify": "prettier --check \"**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}\"",
     "postinstall": "husky install",
     "precommit": "lint-staged",
-    "css:watch": "npx tailwindcss -i ./unpackaged/input.css -o ./unpackaged/output.css --watch"
+    "css:watch": "npx tailwindcss -i ./unpackaged/input.css -o ./force-app/main/default/staticresources/tailwind.css --watch"
   },
   "devDependencies": {
     "@lwc/eslint-plugin-lwc": "^1.1.2",
@@ -26,6 +26,7 @@
     "@salesforce/eslint-plugin-aura": "^2.0.0",
     "@salesforce/eslint-plugin-lightning": "^1.0.0",
     "@salesforce/sfdx-lwc-jest": "^3.1.0",
+    "@tailwindcss/forms": "^0.5.7",
     "eslint": "^8.11.0",
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-jest": "^27.6.0",
