@@ -5,23 +5,24 @@ import { loadStyle } from 'lightning/platformResourceLoader';
 
 
 export default class Survey extends LightningElement {
-    
-    currentSelectedButton = undefined;
+    currentSelectedButton = -1;
 
     async connectedCallback() {
         await loadStyle(this, tailwind);
     }
 
-    get numbers() {
+    get options() {
         let arr =[];
-        for (let i = 0; i <= 10 ; i++) {
+        for (let i = 0; i < 10 ; i++) {
+            const value = i + 1;
             arr.push({
-                value: i + 1,
+                value: value,
                 style: classNames(
-                    'relative inline-flex items-center bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-10',
+                    'relative inline-flex items-center px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-10',
                     { 'rounded-l-md': i === 0 },
-                    { 'rounded-r-md': i === 10},
-                    { 'bg-blue-400': currentSelectedButton === i+1}
+                    { 'rounded-r-md': i === 9},
+                    { 'bg-white': this.currentSelectedButton !== value},
+                    { 'bg-blue-400': this.currentSelectedButton === value}
                 )
             })
         }
@@ -29,6 +30,6 @@ export default class Survey extends LightningElement {
     }
 
     onButtonClick(event) {
-        this.currentSelectedButton = event.target.dataset.number;
+        this.currentSelectedButton = parseInt(event.target.dataset.number);
     }
 }
