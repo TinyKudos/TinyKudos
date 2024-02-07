@@ -4,10 +4,13 @@
     </p>
     <span class="inline-flex rounded-md shadow-sm isolate">
         <template for:each={numbers} for:item="number">
-            <button key={number.value}
+            <button
+                data-number={number.value}
+                key={number}
                 type="button"
+                onclick={onButtonClick}
                 class={number.style}>
-                {number.value}
+                {number.value}                
             </button>
         </template>
     </span>
