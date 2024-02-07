@@ -1,15 +1,15 @@
 <template>
-    <p class="mt-1 text-2xl leading-6 text-gray-900">
+    <p class="mt-1 text-2xl leading-6 text-dxp-text-contrast">
         How happy are you at work?
     </p>
     <span class="inline-flex rounded-md shadow-sm isolate">
         <template for:each={options} for:item="option">
             <button
-                    data-number={option.value}
-                    key={option.value}
-                    type="button"
-                    onclick={onButtonClick}
-                    class={option.style}>
+                data-number={option.value}
+                key={option.value}
+                type="button"
+                onclick={onButtonClick}
+                class={option.style}>
                 {option.value}
             </button>
         </template>
