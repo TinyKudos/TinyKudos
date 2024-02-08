@@ -15,11 +15,9 @@
           },
           "children" : [ {
             "children" : [ {
-              "attributes" : {
-                "richTextValue" : "<div style=\"display: flex; justify-content: center; align-items: center; margin: 50px 0; flex-direction: column; text-align: center;\"><div style=\"background-image: url(assets/img/desert.svg) !important; background-size: cover; background-position: center; height: 300px; width: 100%; max-width: 600px; min-width: 300px;\"></div><h1 class=\"slds-text-heading_medium slds-p-bottom_x-small\">Start Building Your Page</h1> <div>Drag and drop a component into the content slots.</div></div>"
-              },
-              "definition" : "community_builder:htmlEditor",
-              "id" : "6c38dcb7-461b-499b-a643-350efae2283c",
+              "attributes" : { },
+              "definition" : "c:survey",
+              "id" : "50d74761-c11b-44f9-8b05-8a956e7f9b2e",
               "type" : "component"
             } ],
             "id" : "6dd534f3-c9b5-401b-8d8a-9cf54f423421",
