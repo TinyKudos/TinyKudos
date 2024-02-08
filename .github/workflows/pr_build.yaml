@@ -1,0 +1,39 @@
+name: Run Jest Tests
+
+on:
+  pull_request:
+    branches: [ main, develop ]
+    types: [ opened, reopened, synchronize, closed, labeled ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Use Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20.x'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Run Jest Tests
+        run: npm test
+
+      - name: Install Salesforce CLI
+        run: npm install -g @salesforce/cli
+
+      - name: Authenticate to Dev Hub
+        run: echo ${{ secrets.DEV_HUB_AUTH_URL}} > ./SFDX_URL_STORE.txt && sf org login sfdx-url --sfdxurlfile=./SFDX_URL_STORE.txt --alias=devhub --set-default-dev-hub
+
+      - name: Create Scratch Org
+        run: sf org create scratch -f config/project-scratch-def.json -d -y 1
+
+      - name: Push Source to Scratch Org
+        run: npm run push
+
+      - name: Delete Scratch Org
+        run: sf org delete --no-prompt
