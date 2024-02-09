@@ -2,8 +2,10 @@ name: Run Jest Tests
 
 on:
   pull_request:
-    branches: [ main, develop ]
+    branches: [ main ]
     types: [ opened, reopened, synchronize, closed, labeled ]
+  push:
+    branches: [ main ]
 
 jobs:
   build:

@@ -755,6 +755,10 @@ select {
   margin-top: 0.5rem !important;
 }
 
+.mb-4 {
+  margin-bottom: 1rem !important;
+}
+
 .block {
   display: block !important;
 }
@@ -801,6 +805,15 @@ select {
 .bg-white {
   --tw-bg-opacity: 1 !important;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity)) !important;
+}
+
+.bg-dxp-brand-1 {
+  background-color: var(--dxp-g-brand-1) !important;
+}
+
+.bg-gray-50 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(249 250 251 / var(--tw-bg-opacity)) !important;
 }
 
 .px-3 {
@@ -885,6 +898,10 @@ select {
   --tw-ring-inset: inset !important;
 }
 
+.ring-dxp-brand {
+  --tw-ring-color: var(--dxp-g-brand) !important;
+}
+
 .ring-gray-300 {
   --tw-ring-opacity: 1 !important;
   --tw-ring-color: rgb(209 213 219 / var(--tw-ring-opacity)) !important;
@@ -908,6 +925,10 @@ select {
 .hover\:bg-indigo-500:hover {
   --tw-bg-opacity: 1 !important;
   background-color: rgb(99 102 241 / var(--tw-bg-opacity)) !important;
+}
+
+.hover\:bg-dxp-brand-1:hover {
+  background-color: var(--dxp-g-brand-1) !important;
 }
 
 .focus\:z-10:focus {
