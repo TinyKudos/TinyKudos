@@ -2,13 +2,15 @@ import { LightningElement } from 'lwc';
 import tailwind from '@salesforce/resourceUrl/tailwind';
 import { classNames } from 'c/utils';
 import { loadStyle } from 'lightning/platformResourceLoader';
-
+import getSurvey from '@salesforce/apex/SurveyController.getSurvey';
 
 export default class Survey extends LightningElement {
     currentSelectedButton = -1;
 
     async connectedCallback() {
         await loadStyle(this, tailwind);
+        this.survey = await getSurvey({surveyId : 'a00Ek000009b1zFIAQ'});
+        console.log(this.survey);
     }
 
     get options() {
