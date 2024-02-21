@@ -1,7 +1,8 @@
 public class SurveyDto {
     @AuraEnabled
     public Id recordId { get; set; }
-
+    @AuraEnabled
+    public String title { get { return this.questions[0].title; } }
     @AuraEnabled
     public List<QuestionDto> questions { get; set; }
 
