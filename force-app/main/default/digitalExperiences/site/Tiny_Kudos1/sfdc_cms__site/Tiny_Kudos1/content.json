@@ -1,7 +1,7 @@
 {
-  "type" : "sfdc_cms__site",
-  "title" : "Tiny Kudos",
-  "contentBody" : {
-    "authenticationType" : "AUTHENTICATED"
-  }
+    "type": "sfdc_cms__site",
+    "title": "Tiny Kudos",
+    "contentBody": {
+        "authenticationType": "AUTHENTICATED"
+    }
 }
