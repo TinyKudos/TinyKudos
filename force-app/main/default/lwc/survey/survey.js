@@ -6,6 +6,7 @@ import getSurvey from '@salesforce/apex/SurveyController.getSurvey';
 
 export default class Survey extends LightningElement {
     currentSelectedButton = -1;
+    survey;
 
     async connectedCallback() {
         await loadStyle(this, tailwind);
