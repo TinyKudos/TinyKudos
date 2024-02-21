@@ -9,7 +9,7 @@ export default class Survey extends LightningElement {
 
     async connectedCallback() {
         await loadStyle(this, tailwind);
-        this.survey = await getSurvey({ surveyId: 'a00Ek000009b1zFIAQ' });
+        this.survey = await getSurvey();
         console.log(this.survey);
     }
 
