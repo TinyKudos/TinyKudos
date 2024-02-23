@@ -2,8 +2,6 @@
  * Created by stanley on 5/2/24.
  */
 
-class Utils {
+class Utils {}
 
-}
-
-export * from "./classNames.js";
+export * from './classNames.js';
