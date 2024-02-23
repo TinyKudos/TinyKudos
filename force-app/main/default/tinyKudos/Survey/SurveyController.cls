@@ -1,5 +1,6 @@
 public class SurveyController {
-    @TestVisible private static ISurveyRepository repository;
+    @TestVisible
+    private static ISurveyRepository repository;
 
     @AuraEnabled(Cacheable=true)
     public static SurveyDto getSurvey() {
@@ -21,9 +22,7 @@ public class SurveyController {
                 FROM Survey__c
             ];
             if (surveys.isEmpty()) {
-                throw new DataException(
-                    'No surveys found'
-                );
+                throw new DataException('No surveys found');
             }
             for (Survey__c survey : surveys) {
                 if (survey.Survey_Instances__r.isEmpty()) {
@@ -41,5 +40,6 @@ public class SurveyController {
         }
     }
 
-    public class DataException extends Exception { }
+    public class DataException extends Exception {
+    }
 }
