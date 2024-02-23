@@ -15,9 +15,6 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v4
-        with:
-          ref: ${{ github.head_ref }}
-          token: ${{ secrets.ISV_SETUP_BEST_PRACTICES }}
       - name: Restore node cache
         id: cache-npm
         uses: actions/cache/restore@v3
