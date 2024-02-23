@@ -18,10 +18,9 @@ private class SurveyControllerTest {
                 Start_Date__c = Date.today()
             );
 
-            return new List<SurveyDto> {};
+            return new List<SurveyDto>{};
         }
     }
-
 
     // TODO: get rid of if I don't want it
     private static void gettingThisOutOfHere() {
@@ -31,9 +30,7 @@ private class SurveyControllerTest {
         );
         insert testSurvey;
 
-        Question__c testQuestion = new Question__c(
-            Survey__c = testSurvey.Id
-        );
+        Question__c testQuestion = new Question__c(Survey__c = testSurvey.Id);
         insert testQuestion;
     }
 
