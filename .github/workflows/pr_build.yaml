@@ -10,6 +10,8 @@ on:
 jobs:
     build:
         runs-on: ubuntu-latest
+        permissions:
+          contents: write
 
         steps:
             - uses: actions/checkout@v2
@@ -28,11 +30,11 @@ jobs:
             - name: Install Salesforce CLI
               run: npm install -g @salesforce/cli
 
-#            - name: Run Prettier
-#              uses: peter-evans/repository-dispatch@v1
-#              with:
-#                token: ${{ secrets.GITHUB_TOKEN }}
-#                event-type: run-prettier
+            - name: Run Prettier
+              uses: peter-evans/repository-dispatch@v1
+              with:
+                token: ${{ secrets.GITHUB_TOKEN }}
+                event-type: run-prettier
 
             - name: Authenticate to Dev Hub
               run: echo ${{ secrets.DEV_HUB_AUTH_URL}} > ./SFDX_URL_STORE.txt && sf org login sfdx-url --sfdxurlfile=./SFDX_URL_STORE.txt --alias=devhub --set-default-dev-hub
