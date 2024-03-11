@@ -7,7 +7,7 @@
     <communityRoles />
     <disableReputationRecordConversations
     >true</disableReputationRecordConversations>
-    <emailSenderAddress>pminetree@fonteva.com</emailSenderAddress>
+    <emailSenderAddress>example@exampleton.com</emailSenderAddress>
     <emailSenderName>Tiny Kudos</emailSenderName>
     <enableApexCDNCaching>true</enableApexCDNCaching>
     <enableCustomVFErrorPageOverrides>false</enableCustomVFErrorPageOverrides>
