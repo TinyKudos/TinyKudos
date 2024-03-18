@@ -1,0 +1,13 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Survey__c",
+                "referenceId": "Survey__cRef1"
+            },
+            "Display_Name__c": "How Happy are you ?",
+            "Frequency__c": "Weekly",
+            "Start_Date__c": "2024-03-18T19:00:00.000+0000"
+        }
+    ]
+}
