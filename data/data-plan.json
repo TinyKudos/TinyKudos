@@ -1,0 +1,26 @@
+[
+    {
+        "sobject": "Survey__c",
+        "saveRefs": true,
+        "resolveRefs": true,
+        "files": [
+            "Survey__c.json"
+        ]
+    },
+    {
+        "sobject": "Survey_Instance__c",
+        "saveRefs": true,
+        "resolveRefs": true,
+        "files": [
+            "Survey_Instance__c.json"
+        ]
+    },
+    {
+        "sobject": "Question__c",
+        "saveRefs": true,
+        "resolveRefs": true,
+        "files": [
+            "Question__c.json"
+        ]
+    }
+]
