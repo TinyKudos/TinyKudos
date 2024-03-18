@@ -1,0 +1,13 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Survey_Instance__c",
+                "referenceId": "Survey_Instance__cRef1"
+            },
+            "Available_Until__c": "2025-03-18T19:00:00.000+0000",
+            "Date__c": "2024-03-18T19:00:00.000+0000",
+            "Survey__c": "@Survey__cRef1"
+        }
+    ]
+}
