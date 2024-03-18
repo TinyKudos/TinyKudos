@@ -14,5 +14,13 @@
         "files": [
             "Survey_Instance__c.json"
         ]
+    },
+    {
+        "sobject": "Question__c",
+        "saveRefs": true,
+        "resolveRefs": true,
+        "files": [
+            "Question__c.json"
+        ]
     }
 ]
