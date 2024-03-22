@@ -4,9 +4,10 @@
     "version": "1.0.0",
     "description": "Salesforce App",
     "scripts": {
+        "build": "tsc",
         "scratch": "sf org create scratch -f config/project-scratch-def.json -d -y 30 -a TinyKudos",
         "push": "sf project deploy start",
-        "dynamic:question": "ts-node scripts/generate-questions.ts",
+        "dynamic:data": "ts-node scripts/generate-questions.mts && ts-node scripts/generate-surveys.mts",
         "data": "sf data import tree --plan data/data-plan.json",
         "dev": "npm run scratch && npm run push && npm run dynamic:question && npm run data",
         "lint": "eslint **/{aura,lwc}/**/*.js",
