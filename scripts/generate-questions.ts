@@ -1,10 +1,7 @@
 import { faker } from '@faker-js/faker';
 
-
-import fs from 'fs';
-
-import path from 'path';
 import { RecordAttr } from './record.ts';
+import { createJsonFile } from './create-json-file.ts';
 
 type QuestionRecords = {
     records: QuestionRecord[];
@@ -30,11 +27,4 @@ function createRecords() : QuestionRecords {
     }
 }
 
-const nodeRoot = process.cwd();
-const output = createRecords();
-const outputDir = path.join(__dirname, 'data');
-if (!fs.existsSync(outputDir)) {
-    fs.mkdirSync(outputDir);
-}
-fs.writeFileSync(path.join(nodeRoot, 'data', 'Question__c.json'), JSON.stringify(output, null, 2));
-
+createJsonFile<QuestionRecords>(createRecords, 'Question__c');
