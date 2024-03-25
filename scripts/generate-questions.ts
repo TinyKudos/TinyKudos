@@ -4,7 +4,7 @@ import { faker } from '@faker-js/faker';
 import fs from 'fs';
 
 import path from 'path';
-import { RecordAttr } from './record.mts';
+import { RecordAttr } from './record.ts';
 
 type QuestionRecords = {
     records: QuestionRecord[];
@@ -14,8 +14,6 @@ type QuestionRecord = {
     Survey__c: string;
     Title__c: string;
 };
-
-
 
 function createRecords() : QuestionRecords {
     return {

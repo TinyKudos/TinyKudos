@@ -1,7 +1,7 @@
 import { faker } from '@faker-js/faker';
 
-import { RecordAttr } from './record.mts';
-import { createJsonFile } from './create-json-file.mts';
+import { RecordAttr } from './record.ts';
+import { createJsonFile } from './create-json-file.ts';
 
 type SurveyRecords = {
     records: SurveyRecord[];
